@@ -1,0 +1,16 @@
+.logo {
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    float: right;
+    background-image: url( "https://ng.ant.design/assets/img/logo.svg");
+    background-size: 100% 100%;
+}
+
+.user{
+    max-height: 40px;
+    width: 150px;
+    float: right;
+    text-align: right;
+    color: silver;
+}

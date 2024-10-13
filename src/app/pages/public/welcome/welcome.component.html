@@ -1,0 +1,18 @@
+<p>welcome works!</p>
+@if (auth.user$ | async; as user) {
+    <ul >
+      <li>{{ user.name }}</li>
+      <li>{{ user.email }}</li>
+    </ul>
+
+    
+    <button (click)="logout()">
+        Log out
+    </button>
+  }@else{
+    No existe un usuario logeado
+    <button (click)="login()">Log in</button>
+  }
+  
+  
+  
