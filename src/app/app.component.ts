@@ -11,37 +11,38 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 // import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { WelcomeComponent } from './pages/public/welcome/welcome.component';
 import { NavbarMenuComponent } from './component/navbar/navbar-menu/navbar-menu.component';
-import { NavbarUserComponent } from "./component/navbar/navbar-user/navbar-user.component";
+import { NavbarUserComponent } from './component/navbar/navbar-user/navbar-user.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,
-    CommonModule, HttpClientModule,
-    //modulo router
-    RouterLink, RouterLinkActive,
-    //component
-    NavbarMenuComponent,
+  imports: [
+    CommonModule,
+    HttpClientModule,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
+    // Componentes
     NavbarMenuComponent,
     WelcomeComponent,
-    //modulos ngZorro
+    NavbarUserComponent,
+    // Módulos de ng-zorro
     NzIconModule,
     NzLayoutModule,
     // NzMenuModule,
     // NzButtonModule,
-    // NzBreadCrumbModule, 
-    NavbarUserComponent],
+    // NzBreadCrumbModule,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']  // Corrección de 'styleUrl' a 'styleUrls'
 })
 export class AppComponent {
   title = 'auth0example';
 
-  constructor(public auth: AuthService){
-    console.log("constructor")
+  constructor(public auth: AuthService) {
+    console.log("Constructor de AppComponent");
     this.auth.idTokenClaims$.subscribe(data => { 
       console.log(data);
-    })
-    
-}
+    });
+  }
 }
