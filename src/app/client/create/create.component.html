@@ -1,1 +1,5 @@
-<p>create works!</p>
+<form (ngSubmit)="createClient()">
+    <input [(ngModel)]="newClient.name" name="name" placeholder="Nombre" required />
+    <button type="submit">Crear</button>
+  </form>
+  

@@ -2,11 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-public',
-  standalone: true,
-  imports: [],
   templateUrl: './public.component.html',
-  styleUrl: './public.component.css'
+  styleUrls: ['./public.component.css']
 })
 export class PublicComponent {
-
+  // Aquí puedes agregar cualquier lógica o propiedades necesarias para tu componente
 }

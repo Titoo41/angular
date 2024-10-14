@@ -6,9 +6,6 @@ import { AuthService } from '@auth0/auth0-angular';
 
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
-// import { NzMenuModule } from 'ng-zorro-antd/menu';
-// import { NzButtonModule } from 'ng-zorro-antd/button';
-// import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { WelcomeComponent } from './pages/public/welcome/welcome.component';
 import { NavbarMenuComponent } from './component/navbar/navbar-menu/navbar-menu.component';
 import { NavbarUserComponent } from './component/navbar/navbar-user/navbar-user.component';
@@ -29,12 +26,9 @@ import { NavbarUserComponent } from './component/navbar/navbar-user/navbar-user.
     // Módulos de ng-zorro
     NzIconModule,
     NzLayoutModule,
-    // NzMenuModule,
-    // NzButtonModule,
-    // NzBreadCrumbModule,
   ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']  // Corrección de 'styleUrl' a 'styleUrls'
+  styleUrls: ['./app.component.css']  // Asegúrate de que este archivo exista
 })
 export class AppComponent {
   title = 'auth0example';

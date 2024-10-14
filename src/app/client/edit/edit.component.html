@@ -1,1 +1,5 @@
-<p>edit works!</p>
+<form (ngSubmit)="updateClient()">
+    <input [(ngModel)]="client.name" name="name" placeholder="Nombre" required />
+    <button type="submit">Actualizar</button>
+  </form>
+  

@@ -1,1 +1,27 @@
-<p>client works!</p>
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clients">
+        <td>{{ client.id }}</td>
+        <td>{{ client.name }}</td>
+        <td>
+          <a [routerLink]="['/client', client.id, 'edit']">Editar</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <!-- Controles de paginado -->
+  <nav>
+    <ul>
+      <li *ngFor="let page of pages">
+        <button (click)="onPageChange(page)">{{ page }}</button>
+      </li>
+    </ul>
+  </nav>
